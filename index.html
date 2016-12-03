@@ -2,26 +2,26 @@
 layout: default
 ---
 
-<section id="capa"  class="parallax-window" data-parallax="scroll" data-image-src="img/bg-capa.jpg">
+<section id="capa"  class="parallax-window" data-parallax="scroll" data-image-src="../img/bg-capa.jpg">
   <div class="container">
     <figure class="logo">
-      <img src="../img/unicorn.svg">
+      <img src="../img/unicorn-negativo.svg">
     </figure>
     <h1>O que eles fizeram <br>em <span>seus vales</span><br> nós faremos em <span><br>nosso planalto.</span></h1>
 
     <nav class="site-nav">
         <ul>
           <li>
-            <a href="#sobre">sobre</a>
+            <a href="#sobre"><span>sobre</span></a>
           </li>
           <li>
-            <a href="#atividades">atividades</a>
+            <a href="#atividades"><span>atividades</span></a>
           </li>
           <li>
-            <a href="#parceiros">parceiros</a>
+            <a href="#parceiros"><span>parceiros</span></a>
           </li>
           <li>
-            <a href="#contato">contato</a>
+            <a href="#contato"><span>contato</span></a>
           </li>
         </ul>
     </nav>
@@ -123,54 +123,84 @@ layout: default
 
     <h1><span>NOSSOS PATROCINADORES</span></h1>
 
-    <article><figure>
-      <img src="../img/baidu.png">
+    <article class="patrocinador"><figure>
+      <a href="http://baidubrasil.blog.br/category/sobre-nos/">
+        <img src="../img/baidu.png">
+      </a>
     </figure></article>
 
-    <article><figure>
-      <img src="../img/legallabs.png">
+    <article class="patrocinador"><figure>
+      <a href="">
+        <img src="../img/logo-legallabs.png">
+      </a>
     </figure></article>
 
-    <article><figure>
-      <img src="../img/bmg.png">
+    <article class="patrocinador"><figure>
+      <a href="">
+        <img src="../img/logo-bmg.png">
+      </a>
     </figure></article>
 
-    <article><figure>
-      <img src="../img/compline.png">
+    <article class="patrocinador"><figure>
+      <a href="">
+        <img src="../img/logo-compline.png">
+      </a>
     </figure></article>
 
     <h1><span>NOSSOS PARCEIROS</span></h1>
 
     <article><figure>
-      <img src="../img/baidu.png">
+      <a href="">
+        <img src="../img/logo-direitotec.png">
+      </a>
     </figure></article>
 
     <article><figure>
-      <img src="../img/legallabs.png">
+      <a href="">
+        <img src="../img/logo-fundepar.png">
+      </a>
     </figure></article>
 
     <article><figure>
-      <img src="../img/bmg.png">
+      <a href="">
+        <img src="../img/logo-fundep.png">
+      </a>
     </figure></article>
 
     <article><figure>
-      <img src="../img/compline.png">
+      <a href="">
+        <img src="../img/logo-direitounb.png">
+      </a>
     </figure></article>
 
     <article><figure>
-      <img src="../img/baidu.png">
+      <a href="">
+        <img src="../img/logo-unb.png">
+      </a>
     </figure></article>
 
     <article><figure>
-      <img src="../img/legallabs.png">
+      <a href="">
+        <img src="../img/logo-uniceub.png">
+      </a>
     </figure></article>
 
     <article><figure>
-      <img src="../img/bmg.png">
+      <a href="">
+        <img src="../img/logo-iesb.png">
+      </a>
     </figure></article>
 
     <article><figure>
-      <img src="../img/compline.png">
+      <a href="">
+        <img src="../img/logo-ucb.png">
+      </a>
+    </figure></article>
+
+    <article><figure>
+      <a href="">
+        <img src="../img/logo-udf.png">
+      </a>
     </figure></article>
 
   </div>
@@ -179,7 +209,7 @@ layout: default
 <section id="contato">
   <div class="container">
     <h1><span>CONVERSE CONOSCO</span></h1>
-    <p>Clique no email para <br>enviar uma nova mensagem.</p>
+    <p>Clique no email para <br>enviar uma nova mensagem:</p>
     <a href="mailto:contato@unicornbr.com.br"><img src="../img/email.svg"> contato@unicornbr.com.br</a>
   </div>
 </section>
@@ -192,3 +222,20 @@ layout: default
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/parallax.js"></script>
+<script type="text/javascript">
+
+  var headerHeight = $('header').height();
+
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+</script>

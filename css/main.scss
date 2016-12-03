@@ -11,10 +11,8 @@ $preto: #333;
 $branco: #fff;
 
 @import
-        "base"
+	"base"
 ;
-
-html, * {box-sizing: border-box;}
 
 // grid system
 
@@ -76,10 +74,34 @@ $mobileWidth: 480px; // !default
 
 header {
 	background-color: $branco;
+	border-bottom: 2px solid $vermelho;
 	position: fixed;
-	top: -60px;
+	top: 0px;
+	z-index: 1;
 	width: 100%;
 	height: 60px;
+	#logo {
+		display: inline-block;
+		float: left;
+		margin: 12px;
+		img {
+			height: 32px;
+		}
+	}
+	nav {
+		display: inline-block;
+		float: right;
+		margin: 12px;
+		margin-top: 18px;
+	}
+	li {
+		display: inline-block;
+		color: $azul;
+		margin-left: 12px;
+		&:hover {
+			border-bottom: 2px solid $vermelho;
+		}
+	}
 }
 
 section {
@@ -92,6 +114,7 @@ section {
 
 #capa {
 	height: 100vh;
+	min-height: 40rem;
 	.logo {
 		@include grid(4);
 		margin-top: 20vh;
@@ -119,6 +142,11 @@ section {
     	font-weight: 700;
     	li {
     		margin-bottom: 12px;
+    		&:hover {
+	    		span {
+					border-bottom: 4px solid $vermelho;
+				}
+			}
     	}
     }
 }
@@ -227,6 +255,7 @@ section {
 		@include grid(3);
 		margin-bottom: 48px;
 		margin-top: 48px;
+		padding: 0 24px;
 	}
 }
 
@@ -264,6 +293,9 @@ section {
 		img {
 			height: 24px;
 			margin-right: 12px;
+		}
+		&:hover {
+			background-color: $azul;
 		}
 	}
 }

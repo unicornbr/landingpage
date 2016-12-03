@@ -1,6 +1,9 @@
 /**
  * Reset some basic elements
  */
+html, * {
+  box-sizing: border-box; }
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -54,7 +57,8 @@ h3 {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  letter-spacing: 0.05em; }
 
 p, li {
   font-size: 16px;
@@ -66,7 +70,8 @@ p {
 
 li {
   list-style-type: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 0.05em; }
 
 img {
   max-width: 100%;
@@ -79,9 +84,6 @@ li > ul,
 li > ol {
   margin-bottom: 0; }
 
-html, * {
-  box-sizing: border-box; }
-
 .container {
   width: 83.333%;
   max-width: 100%;
@@ -92,10 +94,29 @@ html, * {
 
 header {
   background-color: #fff;
+  border-bottom: 2px solid #ee3a39;
   position: fixed;
-  top: -60px;
+  top: 0px;
+  z-index: 1;
   width: 100%;
   height: 60px; }
+  header #logo {
+    display: inline-block;
+    float: left;
+    margin: 12px; }
+    header #logo img {
+      height: 32px; }
+  header nav {
+    display: inline-block;
+    float: right;
+    margin: 12px;
+    margin-top: 18px; }
+  header li {
+    display: inline-block;
+    color: #172442;
+    margin-left: 12px; }
+    header li:hover {
+      border-bottom: 2px solid #ee3a39; }
 
 section {
   padding-top: 72px;
@@ -104,7 +125,8 @@ section {
     position: relative; }
 
 #capa {
-  height: 100vh; }
+  height: 100vh;
+  min-height: 40rem; }
   #capa .logo {
     display: block;
     float: left;
@@ -180,6 +202,8 @@ section {
         margin-left: calc(0.5rem/2); } }
     #capa .site-nav li {
       margin-bottom: 12px; }
+      #capa .site-nav li:hover span {
+        border-bottom: 4px solid #ee3a39; }
 
 #objetivo {
   background-color: #ee3a39;
@@ -316,7 +340,8 @@ section {
     margin-right: calc(24px/2);
     margin-left: calc(24px/2);
     margin-bottom: 48px;
-    margin-top: 48px; }
+    margin-top: 48px;
+    padding: 0 24px; }
     @media screen and (max-width: 640px) {
       #parceiros figure {
         width: calc( (100%/8 - 0.5rem)*3 + (3 - 1)*0.5rem);
@@ -378,6 +403,8 @@ section {
     #contato a img {
       height: 24px;
       margin-right: 12px; }
+    #contato a:hover {
+      background-color: #172442; }
 
 footer {
   background-color: #333;

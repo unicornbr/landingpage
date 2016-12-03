@@ -1,6 +1,11 @@
 /**
  * Reset some basic elements
  */
+
+html, * {
+    box-sizing: border-box;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -62,6 +67,7 @@ h3 {
     line-height: 24px;
     text-transform: uppercase;
     margin-bottom: 12px;
+    letter-spacing: 0.05em;
 }
 
 p, li {
@@ -77,6 +83,7 @@ p {
 li {
     list-style-type: none;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 
