@@ -6,7 +6,7 @@
 //cores
 
 $vermelho: #ee3a39;
-$azul: #21345f;
+$azul: #172442;
 $preto: #333;
 $branco: #fff;
 
@@ -19,7 +19,7 @@ html, * {box-sizing: border-box;}
 // grid system
 
 $nOfColumns: 12; // !default
-$gutter: 1rem; // !default
+$gutter: 24px; // !default
 $columnWidth: ( 100%/#{$nOfColumns} - #{$gutter} );
 
 $nOfColumnsTablet: 8; // !default
@@ -70,7 +70,8 @@ $mobileWidth: 480px; // !default
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
-  overflow: auto;
+  overflow: hidden;
+  height:100%;
 }
 
 header {
@@ -83,6 +84,10 @@ header {
 
 section {
 	padding-top: 72px;
+	height: 100%;
+	* {
+		position: relative;
+	}
 }
 
 #capa {
@@ -134,13 +139,46 @@ section {
 }
 
 #sobre {
-	background-color: $branco;
-	h1 {
-		color: $vermelho;
+	padding: 0;
+	.container {
+		width: 100%;
 	}
-	h1, article {
-		@include grid(5);
-		@include offsetRight(1);
+	background-color: $azul;
+	h1 {
+		color: $branco;
+		font-size: 72px;
+		line-height: 96px;
+	}
+	h2 {
+		padding-bottom: 36px;
+	}
+	article {
+		width: 50%;
+		float: left;
+		box-sizing: border-box;
+		padding-top: 72px;
+		padding-bottom: 72px;
+		margin-bottom: 0;
+		background-color: $branco;
+		&.sobre {
+			padding-left: 8.333%;
+			padding-right: calc( 100%/#{$nOfColumns} - #{$gutter} );
+			background-color: transparent;
+		}
+		&.cara {
+			padding-right: 8.333%;
+			padding-left: calc( 100%/#{$nOfColumns} - #{$gutter} );
+			border-bottom: 1px dotted $azul;
+		}
+		&.processos {
+			padding-left: 8.333%;
+			padding-right: calc( 100%/#{$nOfColumns} - #{$gutter} );
+			border-right: 1px dotted $azul;
+		}
+		&.impacto {
+			padding-right: 8.333%;
+			padding-left: calc( 100%/#{$nOfColumns} - #{$gutter} );
+		}
 	}
 	p {
 		color: $preto;
@@ -148,23 +186,28 @@ section {
 	h2 {
 		color: $azul;
 		border-bottom: 1px solid $vermelho;
-	    padding-bottom: 24px;
-	}
-	article {
-		margin-bottom: 48px;
 	}
 }
 
 #atividades {
 	background-color: $azul;
-	color: white;
+	color: $branco;
 	padding-bottom: 96px;
 	article {
 		@include grid(3);
+		padding-right: 48px;
 	}
 	figure {
-		padding-right: 50%;
+		@include grid(6);
 		margin-bottom: 48px;
+	}
+	h1 {
+		color: $vermelho
+	}
+	h2 {
+		border-bottom: 1px dotted $vermelho;
+		padding-bottom: 24px;
+		color: $branco
 	}
 }
 
@@ -177,6 +220,8 @@ section {
 
 #contato {
 	background-color: $vermelho;
+	padding-bottom: 96px;
+	text-align: center;
 	h1 {
 		color: $branco;
 		text-align: center;
@@ -184,8 +229,36 @@ section {
 			border-bottom: 1px dotted $branco;
 		}
 	}
+	p {
+		@include grid(6);
+		@include offsetLeft(3);
+		@include offsetRight(3);
+		color: $branco;
+		text-align: center;
+		font-size: 36px;
+		line-height: 48px;
+		margin-bottom: 48px;
+	}
+	a {
+		background-color: $branco;
+		font-size: 24px;
+		line-height: 36px;
+		padding: 12px 24px;
+		border-radius: 4px;
+		font-weight: 700;
+		color: $vermelho;
+		display: inline-block;
+	}
 }
 
 footer {
 	background-color: $preto;
+	padding-top: 48px;
+	padding-bottom: 48px;
+	p {
+		color: $branco;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
