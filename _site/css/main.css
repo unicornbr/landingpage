@@ -37,7 +37,8 @@ h1 {
   font-size: 48px;
   line-height: 60px;
   font-weight: 800;
-  margin-bottom: 48px; }
+  margin-bottom: 48px;
+  letter-spacing: 0.05em; }
 
 h2 {
   font-size: 28px;
@@ -45,7 +46,9 @@ h2 {
   font-family: "freight-micro-pro", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: italic;
-  margin-bottom: 36px; }
+  margin-bottom: 24px;
+  border-bottom: 1px dotted #ee3a39;
+  padding-bottom: 24px; }
 
 h3 {
   font-size: 16px;
@@ -136,7 +139,8 @@ section {
     text-align: right;
     font-weight: 300;
     padding-right: 48px;
-    border-right: 1px dotted #fff; }
+    border-right: 1px dotted #fff;
+    letter-spacing: 0; }
     @media screen and (max-width: 640px) {
       #capa h1 {
         width: calc( (100%/8 - 0.5rem)*5 + (5 - 1)*0.5rem);
@@ -194,7 +198,8 @@ section {
     padding-bottom: 72px;
     padding-top: 72px;
     border-top: 1px dotted #fff;
-    border-bottom: 1px dotted #fff; }
+    border-bottom: 1px dotted #fff;
+    letter-spacing: 0; }
     @media screen and (max-width: 640px) {
       #objetivo h1 {
         width: calc( (100%/8 - 0.5rem)*10 + (10 - 1)*0.5rem);
@@ -220,7 +225,7 @@ section {
   #sobre figure img {
     height: 24px; }
   #sobre h2 {
-    padding-bottom: 36px; }
+    color: #172442; }
   #sobre article {
     width: 50%;
     float: left;
@@ -246,9 +251,6 @@ section {
       padding-left: calc( 100%/12 - 24px ); }
   #sobre p {
     color: #333; }
-  #sobre h2 {
-    color: #172442;
-    border-bottom: 1px solid #ee3a39; }
 
 #atividades {
   background-color: #172442;
@@ -297,14 +299,36 @@ section {
         margin-right: calc(0.5rem/2);
         margin-left: calc(0.5rem/2); } }
   #atividades h2 {
-    border-bottom: 1px dotted #ee3a39;
-    padding-bottom: 24px;
     color: #fff; }
 
 #parceiros {
   background-color: #fff; }
   #parceiros h1 {
     text-align: center; }
+    #parceiros h1 span {
+      border-bottom: 1px dotted #172442;
+      padding-bottom: 24px; }
+  #parceiros figure {
+    display: block;
+    float: left;
+    width: calc( (100%/12 - 24px)*3 + (3 - 1)*24px);
+    max-width: calc(100% - 24px);
+    margin-right: calc(24px/2);
+    margin-left: calc(24px/2);
+    margin-bottom: 48px;
+    margin-top: 48px; }
+    @media screen and (max-width: 640px) {
+      #parceiros figure {
+        width: calc( (100%/8 - 0.5rem)*3 + (3 - 1)*0.5rem);
+        max-width: calc(100% - 0.5rem);
+        margin-right: calc(0.5rem/2);
+        margin-left: calc(0.5rem/2); } }
+    @media screen and (max-width: 480px) {
+      #parceiros figure {
+        width: calc( (100%/4 - 0.5rem)*3 + (3 - 1)*0.5rem);
+        max-width: calc(100% - 0.5rem);
+        margin-right: calc(0.5rem/2);
+        margin-left: calc(0.5rem/2); } }
 
 #contato {
   background-color: #ee3a39;

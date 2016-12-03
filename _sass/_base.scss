@@ -42,6 +42,7 @@ h1 {
     line-height: 60px;
     font-weight: 800;
     margin-bottom: 48px;
+    letter-spacing: 0.05em;
 }
 
 
@@ -51,7 +52,9 @@ h2 {
     font-family: "freight-micro-pro", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-style: italic;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
+    border-bottom: 1px dotted $vermelho;
+    padding-bottom: 24px;
 }
 
 h3 {
