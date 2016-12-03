@@ -1,0 +1,36 @@
+@import 
+	"variaveis-responsividade",
+    "mixins-diagrama"
+;
+
+$a: 1;
+@media screen and (max-width: nth($breakpoints, 1) - 1px) {
+	$grid: nth($col, $a);
+	$img: 0, 0;
+	$txt: 0, 0;
+	@import "nesting-structure";
+}
+
+$a: 2;
+@media screen and (min-width: nth($breakpoints, 1)) {
+	$grid: nth($col, $a);
+	$img: 0, 0;
+	$txt: 2, 0;
+	@import "nesting-structure";
+}
+
+$a: 3;
+@media screen and (min-width: nth($breakpoints, 2)) {
+	$grid: nth($col, $a);
+	$img: 1, 1;
+	$txt: 3, 1;
+	@import "nesting-structure";
+}
+
+$a: 4;
+@media screen and (min-width: nth($breakpoints, 3)) {
+	$grid: nth($col, $a);
+	$img: 2, 1;
+	$txt: 4, 2;
+	@import "nesting-structure";
+}

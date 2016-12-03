@@ -1,0 +1,191 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+//cores
+
+$vermelho: #ee3a39;
+$azul: #21345f;
+$preto: #333;
+$branco: #fff;
+
+@import
+        "base"
+;
+
+html, * {box-sizing: border-box;}
+
+// grid system
+
+$nOfColumns: 12; // !default
+$gutter: 1rem; // !default
+$columnWidth: ( 100%/#{$nOfColumns} - #{$gutter} );
+
+$nOfColumnsTablet: 8; // !default
+$gutterTablet: 0.5rem; // !default
+$columnWidthTablet: ( 100%/#{$nOfColumnsTablet} - #{$gutterTablet} );
+
+$nOfColumnsMobile: 4; // !default
+$gutterMobile: 0.5rem; // !default
+$columnWidthMobile: ( 100%/#{$nOfColumnsMobile} - #{$gutterMobile} );
+
+$tabletWidth: 640px; // !default
+$mobileWidth: 480px; // !default
+
+@mixin grid($size) {
+  display: block;
+  float: left;
+  width: calc( (#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter});
+  max-width: calc(100% - #{$gutter});
+  margin-right: calc(#{$gutter}/2);
+  margin-left: calc(#{$gutter}/2);
+
+  @media screen and (max-width: $tabletWidth) {
+    width: calc( (#{$columnWidthTablet})*#{$size} + (#{$size} - 1)*#{$gutterTablet});
+    max-width: calc(100% - #{$gutterTablet});
+    margin-right: calc(#{$gutterTablet}/2);
+    margin-left: calc(#{$gutterTablet}/2);
+  }
+
+  @media screen and (max-width: $mobileWidth) {
+    width: calc( (#{$columnWidthMobile})*#{$size} + (#{$size} - 1)*#{$gutterMobile});
+    max-width: calc(100% - #{$gutterMobile});
+    margin-right: calc(#{$gutterMobile}/2);
+    margin-left: calc(#{$gutterMobile}/2);
+  }
+
+}
+
+@mixin offset($side, $size) {
+  margin-#{$side}: calc((#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter} + 1.5*#{$gutter});
+}
+
+@mixin offsetLeft($size) {@include offset(left, $size);}
+@mixin offsetRight($size) {@include offset(right, $size);}
+
+.container {
+  //width: calc(60% + 240px); // !default
+  width: 83.333%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: auto;
+}
+
+header {
+	background-color: $branco;
+	position: fixed;
+	top: -60px;
+	width: 100%;
+	height: 60px;
+}
+
+section {
+	padding-top: 72px;
+}
+
+#capa {
+	height: 100vh;
+	.logo {
+		@include grid(4);
+		margin-top: 20vh;
+	}
+	h1 {
+		box-sizing: border-box;
+		@include grid(5);
+		@include offsetLeft(3);
+		margin-top: 20vh;
+		color: white;
+		text-align: right;
+		font-weight: 300;
+		padding-right: 48px;
+		border-right: 1px dotted $branco;
+		span {
+			font-weight: 700;
+		}
+	}
+    .site-nav {
+    	@include grid(2);
+    	@include offsetLeft(10);
+    	color: $branco;
+    	text-align: right;
+    	font-weight: 700;
+    	li {
+    		margin-bottom: 12px;
+    	}
+    }
+}
+
+#objetivo {
+	background-color: $vermelho;
+	padding-bottom: 48px;
+	h1 {
+		@include grid(10);
+		@include offsetLeft(1);
+		@include offsetRight(1);
+		color: white;
+		text-align: center;
+		padding-bottom: 72px;
+		padding-top: 72px;
+		border-top: 1px dotted $branco;
+		border-bottom: 1px dotted $branco;
+	}
+}
+
+#sobre {
+	background-color: $branco;
+	h1 {
+		color: $vermelho;
+	}
+	h1, article {
+		@include grid(5);
+		@include offsetRight(1);
+	}
+	p {
+		color: $preto;
+	}
+	h2 {
+		color: $azul;
+		border-bottom: 1px solid $vermelho;
+	    padding-bottom: 24px;
+	}
+	article {
+		margin-bottom: 48px;
+	}
+}
+
+#atividades {
+	background-color: $azul;
+	color: white;
+	padding-bottom: 96px;
+	article {
+		@include grid(3);
+	}
+	figure {
+		padding-right: 50%;
+		margin-bottom: 48px;
+	}
+}
+
+#parceiros {
+	background-color: $branco;
+	h1 {
+		text-align: center;
+	}
+}
+
+#contato {
+	background-color: $vermelho;
+	h1 {
+		color: $branco;
+		text-align: center;
+		span {
+			border-bottom: 1px dotted $branco;
+		}
+	}
+}
+
+footer {
+	background-color: $preto;
+}

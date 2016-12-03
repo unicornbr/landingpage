@@ -1,0 +1,95 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:focus {
+    text-decoration: none;
+}
+a:hover, a:active {
+    text-decoration: none;
+}
+
+/**
+ * Basic styling
+ */
+body {
+    color: $preto;
+    background-color: $branco;
+}
+
+h1, h3, p, li {
+    font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 800;
+    margin-bottom: 48px;
+}
+
+
+h2 {
+    font-size: 28px;
+    line-height: 36px;
+    font-family: "freight-micro-pro", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 36px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+p {
+    margin-bottom: 24px;
+    font-weight: 300;
+}
+
+li {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+figure > img {
+    display: block;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}

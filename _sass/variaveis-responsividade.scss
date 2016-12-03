@@ -1,0 +1,10 @@
+$breakpoints: 500px, 1025px, 1280px;
+
+// ritmo vertical
+$leading: 1.5rem;
+
+// ritmo horizontal
+$col: 2, 6, 12, 12;
+$grid_variety: length($col);
+$gutter: $leading;
+$area: 83.333%; // vai se tornar uma lista, com os diferentes valores da área útil para cada resolução
