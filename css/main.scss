@@ -74,7 +74,7 @@ $mobileWidth: 480px; // !default
 
 header {
 	background-color: $branco;
-	border-bottom: 2px solid $vermelho;
+	border-bottom: 1px solid $vermelho;
 	position: fixed;
 	top: 0px;
 	z-index: 1;
@@ -102,11 +102,18 @@ header {
 			border-bottom: 2px solid $vermelho;
 		}
 	}
+	&.hidden {
+		top: -60px;
+		border-bottom: 4px solid $vermelho;
+	}
 }
 
 section {
-	padding-top: 72px;
+	padding-top: 96px;
 	height: 100%;
+	&:first-of-type {
+		padding-top: 0px;
+	}
 	* {
 		position: relative;
 	}
@@ -117,13 +124,13 @@ section {
 	min-height: 40rem;
 	.logo {
 		@include grid(4);
-		margin-top: 20vh;
+		margin-top: 25vh;
 	}
 	h1 {
 		box-sizing: border-box;
 		@include grid(5);
 		@include offsetLeft(3);
-		margin-top: 20vh;
+		margin-top: 25vh;
 		color: white;
 		text-align: right;
 		font-weight: 300;
@@ -197,6 +204,10 @@ section {
 		padding-bottom: 72px;
 		margin-bottom: 0;
 		background-color: $branco;
+		>* {
+			margin-left: 12px;
+			margin-right: 12px;
+		}
 		&.sobre {
 			padding-left: 8.333%;
 			padding-right: calc( 100%/#{$nOfColumns} - #{$gutter} );
@@ -222,7 +233,7 @@ section {
 	}
 }
 
-#atividades {
+#atuacao {
 	background-color: $azul;
 	color: $branco;
 	padding-bottom: 96px;
@@ -244,8 +255,14 @@ section {
 
 #parceiros {
 	background-color: $branco;
+	padding-bottom: 72px;
 	h1 {
+		@include grid(12);
 		text-align: center;
+		margin-top: 48px;
+		&:first-child {
+			margin-top: 0;
+		}
 		span {
 			border-bottom: 1px dotted $azul;
 			padding-bottom: 24px;
