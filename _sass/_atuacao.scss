@@ -1,0 +1,38 @@
+#atuacao {
+	background-color: $azul;
+	color: $branco;
+	padding-bottom: 96px;
+	article {
+		@include phone(0, 2, 0);
+		@media #{$phoneQuery} {
+        	padding-right: 0;
+    	}
+    	@include tablet(0, 3, 0);
+    	@media #{$tabletQuery} {
+    		padding-right: 0;
+    	}
+		@include desktop(0, 3, 0);
+		@media #{$desktopQuery} {
+			padding-right: 48px;
+		}
+	}
+	h1 {
+		@include phone(0, 4, 0);
+		@include desktop(0, 12, 0);
+		color: $branco;
+	}
+	figure {
+		margin-bottom: 48px;
+		padding-right: 50%;
+		@media #{$phoneQuery} {
+			margin-bottom: 24px;
+		}
+	}
+	h2 {
+		color: $branco
+	}
+	p {
+		border-top: 1px dotted $vermelho;
+		padding-top: 24px;
+	}
+}

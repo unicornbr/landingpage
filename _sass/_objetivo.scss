@@ -1,0 +1,24 @@
+#objetivo {
+	background-color: $vermelho;
+	padding-top: 96px;
+	padding-bottom: 48px;
+	@media #{$phoneQuery} {
+		padding-bottom: 24px;
+		padding-top: 72px;
+	}
+	h1 {
+		@include phone(0, 4, 0);
+		@media #{$phoneQuery} {
+			padding-bottom: 48px;
+			padding-top: 48px;
+		}
+		@include desktop(1, 10, 1);
+		color: white;
+		text-align: center;
+		padding-bottom: 72px;
+		padding-top: 72px;
+		border-top: 1px dotted $branco;
+		border-bottom: 1px dotted $branco;
+		letter-spacing: 0;
+	}
+}

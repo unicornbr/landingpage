@@ -26,9 +26,11 @@ a:hover, a:active {
     text-decoration: none;
 }
 
-/**
- * Basic styling
- */
+b {
+    font-weight: 300;
+    color: $vermelho;
+}
+
 body {
     color: $preto;
     background-color: $branco;
@@ -57,14 +59,18 @@ h2 {
         font-size: 21px;
         line-height: 32px;
     }
-    font-size: 28px;
-    line-height: 36px;
+    @media #{$tabletQuery} {
+        font-size: 21px;
+        line-height: 32px;
+    }
+    @media #{$desktopQuery} {
+        font-size: 28px;
+        line-height: 36px;
+    }
     font-family: "freight-micro-pro", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-style: italic;
     margin-bottom: 24px;
-    border-bottom: 1px dotted $vermelho;
-    padding-bottom: 24px;
 }
 
 h3 {
@@ -86,6 +92,9 @@ p, li {
 p {
     margin-bottom: 24px;
     font-weight: 300;
+    @media #{$phoneQuery} {
+        font-weight: 300;
+    }
 }
 
 li {
@@ -96,6 +105,14 @@ li {
         font-size: 14px;
         display: inline-block;
         margin-left: 6px;
+    }
+    @media #{$tabletQuery} {
+        display: inline-block;
+        margin-left: 6px;
+    }
+    @media #{$desktopQuery} {
+        display: block;
+        margin-left: 0px;
     }
 }
 
@@ -115,4 +132,27 @@ li {
     > ol {
          margin-bottom: 0;
     }
+}
+
+section {
+    @media #{$phoneQuery} {
+        padding-top: 48px;
+    }
+    padding-top: 72px;
+    height: 100%;
+    &:first-of-type {
+        padding-top: 0px;
+    }
+    * {
+        position: relative;
+    }
+}
+
+.container {
+    width: calc(66.666% + 240px);
+    max-width: calc(100% - 24px);
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    height:100%;
 }

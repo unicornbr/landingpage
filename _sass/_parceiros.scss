@@ -1,0 +1,41 @@
+#parceiros {
+	background-color: $branco;
+	padding-bottom: 72px;
+	h1 {
+		@include phone(0, 4, 0);
+		@include desktop(0, 12, 0);
+		text-align: center;
+		margin-top: 48px;
+		&:first-child {
+			margin-top: 0;
+		}
+		span {
+			position: relative;
+			padding-bottom: 24px;
+			&:after { 
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 1px;
+				border-bottom: 1px dotted $azul;
+				content:""
+			}
+		}
+	}
+	figure {
+		margin-bottom: 48px;
+		margin-top: 48px;
+		@include phone(0, 2, 0);
+		@include tablet(0, 3, 0);
+		@media #{$phoneQuery} {
+			padding: 0;
+		}
+		@media #{$tabletQuery} {
+			padding: 0;
+		}
+		@media #{$desktopQuery} {
+			padding: 0 24px;
+		}
+	}
+}

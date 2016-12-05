@@ -1,0 +1,35 @@
+#impacto {
+	padding-bottom: 48px;
+	border-top: 1px solid $azul;
+	article {
+		border-top: 1px dotted $vermelho;
+		padding-top: 24px;
+		@include phone(0, 4, 0);
+		@media #{$phoneQuery} {
+        	padding-right: 0;
+        	padding-top: 12px;
+    	}
+    	@media #{$tabletQuery} {
+    		padding-right: 0;
+    	}
+    	@media #{$desktopQuery} {
+    		padding-right: 0;
+    	}
+		@include tablet(0, 4, 0);
+		padding-right: 48px;
+	}
+	.titulo {
+		@include phone(0, 4, 0);
+		@include tablet(0, 12, 0);
+		border-top: none;
+		border-bottom: none;
+		padding-top: 0;
+	    padding-bottom: 0;
+	    margin-bottom: 0;
+	    h1 {
+	    	@media #{$phoneQuery} {
+		    	margin-bottom: 24px;
+		    }
+	    }
+	}
+}

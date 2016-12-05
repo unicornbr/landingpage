@@ -23,9 +23,10 @@ a:focus {
 a:hover, a:active {
   text-decoration: none; }
 
-/**
- * Basic styling
- */
+b {
+  font-weight: 300;
+  color: #ee3a39; }
+
 body {
   color: #333;
   background-color: #fff; }
@@ -46,18 +47,22 @@ h1 {
       margin-bottom: 48px; } }
 
 h2 {
-  font-size: 28px;
-  line-height: 36px;
   font-family: "freight-micro-pro", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: italic;
-  margin-bottom: 24px;
-  border-bottom: 1px dotted #ee3a39;
-  padding-bottom: 24px; }
+  margin-bottom: 24px; }
   @media screen and (max-width: 640px) {
     h2 {
       font-size: 21px;
       line-height: 32px; } }
+  @media screen and (min-width: 641px) {
+    h2 {
+      font-size: 21px;
+      line-height: 32px; } }
+  @media screen and (min-width: 1025px) {
+    h2 {
+      font-size: 28px;
+      line-height: 36px; } }
 
 h3 {
   font-size: 16px;
@@ -76,6 +81,9 @@ p, li {
 p {
   margin-bottom: 24px;
   font-weight: 300; }
+  @media screen and (max-width: 640px) {
+    p {
+      font-weight: 300; } }
 
 li {
   list-style-type: none;
@@ -86,6 +94,14 @@ li {
       font-size: 14px;
       display: inline-block;
       margin-left: 6px; } }
+  @media screen and (min-width: 641px) {
+    li {
+      display: inline-block;
+      margin-left: 6px; } }
+  @media screen and (min-width: 1025px) {
+    li {
+      display: block;
+      margin-left: 0px; } }
 
 img {
   max-width: 100%;
@@ -98,6 +114,17 @@ li > ul,
 li > ol {
   margin-bottom: 0; }
 
+section {
+  padding-top: 72px;
+  height: 100%; }
+  @media screen and (max-width: 640px) {
+    section {
+      padding-top: 48px; } }
+  section:first-of-type {
+    padding-top: 0px; }
+  section * {
+    position: relative; }
+
 .container {
   width: calc(66.666% + 240px);
   max-width: calc(100% - 24px);
@@ -108,15 +135,24 @@ li > ol {
 
 header {
   background-color: #fff;
-  border-bottom: 1px solid #ee3a39;
-  position: fixed;
-  top: 0px;
   z-index: 1;
   width: 100%;
   height: 60px; }
   @media screen and (max-width: 640px) {
     header {
-      display: none; } }
+      top: -56px;
+      border-bottom: 4px solid #ee3a39;
+      position: absolute; } }
+  @media screen and (min-width: 641px) {
+    header {
+      top: -56px;
+      border-bottom: 4px solid #ee3a39;
+      position: absolute; } }
+  @media screen and (min-width: 1025px) {
+    header {
+      border-bottom: 1px solid #ee3a39;
+      position: fixed;
+      top: 0px; } }
   header #logo {
     display: inline-block;
     float: left;
@@ -138,56 +174,44 @@ header {
     top: -60px;
     border-bottom: 4px solid #ee3a39; }
 
-section {
-  padding-top: 96px;
-  height: 100%; }
-  @media screen and (max-width: 640px) {
-    section {
-      padding-top: 72px; } }
-  section:first-of-type {
-    padding-top: 0px; }
-  section * {
-    position: relative; }
-
 #capa {
-  height: 100vh;
-  min-height: 40rem; }
-  #capa .logo {
-    margin-top: 25vh; }
-    @media screen and (max-width: 640px) {
-      #capa .logo {
-        margin-top: 72px;
-        padding-left: 36px;
-        padding-right: 36px; } }
-    @media screen and (max-width: 640px) {
-      #capa .logo {
-        display: block;
-        float: left;
-        width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
-        margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
-    @media screen and (min-width: 641px) {
-      #capa .logo {
-        display: block;
-        float: left;
-        width: calc( (100%/12 - 24px)*5 + (5 - 1)*24px);
-        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
-    @media screen and (min-width: 1025px) {
-      #capa .logo {
-        display: block;
-        float: left;
-        width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
-        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  min-height: 100vh; }
+  @media screen and (max-width: 640px) {
+    #capa .logo {
+      display: block;
+      float: left;
+      width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
+      margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+      margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  @media screen and (max-width: 640px) {
+    #capa .logo {
+      margin-top: 72px;
+      padding-left: 36px;
+      padding-right: 36px; } }
+  @media screen and (min-width: 641px) {
+    #capa .logo {
+      display: block;
+      float: left;
+      width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+      margin-left: calc((100%/12 - 24px)*8 + (8 - 1)*24px + 1.5*24px);
+      margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  @media screen and (min-width: 641px) {
+    #capa .logo {
+      margin-top: 96px; } }
+  @media screen and (min-width: 1025px) {
+    #capa .logo {
+      display: block;
+      float: left;
+      width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+      margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+      margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  @media screen and (min-width: 1025px) {
+    #capa .logo {
+      margin-top: 25vh; } }
   #capa h1 {
     box-sizing: border-box;
-    margin-top: 25vh;
     color: white;
-    text-align: right;
     font-weight: 300;
-    padding-right: 48px;
-    border-right: 1px dotted #fff;
     letter-spacing: 0; }
     @media screen and (max-width: 640px) {
       #capa h1 {
@@ -196,34 +220,27 @@ section {
         width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
         margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
-    @media screen and (min-width: 1025px) {
-      #capa h1 {
-        display: block;
-        float: left;
-        width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
-        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
     @media screen and (max-width: 640px) {
       #capa h1 {
         margin-top: 72px;
-        padding-right: 24px;
+        padding-left: 12px;
+        padding-right: 12px;
         padding-top: 0;
-        padding-right: 0;
-        border-right: none; } }
-    @media screen and (max-width: 640px) {
-      #capa h1 {
-        display: block;
-        float: left;
-        width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
-        margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+        border-right: none;
+        text-align: center; } }
     @media screen and (min-width: 641px) {
       #capa h1 {
         display: block;
         float: left;
-        width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
+        width: calc( (100%/12 - 24px)*11 + (11 - 1)*24px);
         margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 641px) {
+      #capa h1 {
+        margin-top: 72px;
+        text-align: right;
+        padding-right: 48px;
+        border-right: 1px dotted #ee3a39; } }
     @media screen and (min-width: 1025px) {
       #capa h1 {
         display: block;
@@ -231,6 +248,9 @@ section {
         width: calc( (100%/12 - 24px)*5 + (5 - 1)*24px);
         margin-left: calc((100%/12 - 24px)*3 + (3 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 1025px) {
+      #capa h1 {
+        margin-top: 25vh; } }
     #capa h1 span {
       font-weight: 700; }
   #capa .site-nav {
@@ -238,16 +258,42 @@ section {
     text-align: right;
     font-weight: 700; }
     @media screen and (max-width: 640px) {
-      #capa .site-nav li:after {
-        content: "|";
-        margin-left: 6px; } }
-    @media screen and (max-width: 640px) {
       #capa .site-nav {
         display: block;
         float: left;
-        width: calc( (100%/4 - 24px)*3 + (3 - 1)*24px);
-        margin-left: calc((100%/4 - 24px)*1 + (1 - 1)*24px + 1.5*24px);
+        width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
+        margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (max-width: 640px) {
+      #capa .site-nav {
+        border-top: 1px dotted #ee3a39;
+        text-align: center;
+        margin-top: 0;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 48px; }
+        #capa .site-nav li:last-child:after {
+          content: none; }
+        #capa .site-nav li:after {
+          content: "|";
+          margin-left: 6px; } }
+    @media screen and (min-width: 641px) {
+      #capa .site-nav {
+        display: block;
+        float: left;
+        width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
+        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 641px) {
+      #capa .site-nav {
+        text-align: right;
+        margin-top: 0;
+        padding-top: 48px; }
+        #capa .site-nav li:last-child:after {
+          content: none; }
+        #capa .site-nav li:after {
+          content: "|";
+          margin-left: 6px; } }
     @media screen and (min-width: 1025px) {
       #capa .site-nav {
         display: block;
@@ -255,6 +301,11 @@ section {
         width: calc( (100%/12 - 24px)*2 + (2 - 1)*24px);
         margin-left: calc((100%/12 - 24px)*10 + (10 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 1025px) {
+      #capa .site-nav {
+        padding-top: 48px; }
+        #capa .site-nav li:after {
+          content: none; } }
     #capa .site-nav li {
       margin-bottom: 12px; }
       #capa .site-nav li:hover span {
@@ -262,10 +313,12 @@ section {
 
 #objetivo {
   background-color: #ee3a39;
+  padding-top: 96px;
   padding-bottom: 48px; }
   @media screen and (max-width: 640px) {
     #objetivo {
-      padding-bottom: 24px; } }
+      padding-bottom: 24px;
+      padding-top: 72px; } }
   #objetivo h1 {
     color: white;
     text-align: center;
@@ -295,40 +348,12 @@ section {
 
 #sobre {
   padding: 0;
-  background-color: #172442; }
+  background-color: #172442;
+  overflow: hidden; }
   #sobre .container {
     width: 100%;
     max-width: 100%;
     overflow: hidden; }
-  #sobre h1 {
-    color: #fff;
-    font-size: 72px;
-    line-height: 84px; }
-    @media screen and (max-width: 640px) {
-      #sobre h1 {
-        display: block;
-        float: left;
-        width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
-        margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
-    @media screen and (min-width: 1025px) {
-      #sobre h1 {
-        display: block;
-        float: left;
-        width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
-        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
-    @media screen and (max-width: 640px) {
-      #sobre h1 {
-        font-size: 48px;
-        line-height: 60px; } }
-  #sobre figure img {
-    height: 24px; }
-    @media screen and (max-width: 640px) {
-      #sobre figure img {
-        height: 12px; } }
-  #sobre h2 {
-    color: #172442; }
   #sobre article {
     width: 50%;
     float: left;
@@ -339,80 +364,159 @@ section {
     background-color: #fff; }
     @media screen and (max-width: 640px) {
       #sobre article {
-        width: 100%; } }
+        width: 100%;
+        padding-top: 48px;
+        padding-bottom: 48px; } }
     #sobre article > * {
       margin-left: 12px;
       margin-right: 12px; }
     #sobre article.sobre {
       padding-left: calc(16.666% - 120px);
       padding-right: calc( 100%/12 - 24px );
-      background-color: transparent; }
+      background-color: #172442;
+      padding-bottom: 500em;
+      margin-bottom: -500em; }
       @media screen and (max-width: 640px) {
         #sobre article.sobre {
           width: 50%;
           background-color: #172442;
           padding-right: 12px;
-          padding-left: 12px;
-          border-bottom: 1px dotted #172442; } }
+          padding-left: 12px; } }
+      #sobre article.sobre h1 {
+        color: #fff;
+        font-size: 72px;
+        line-height: 84px; }
+        @media screen and (max-width: 640px) {
+          #sobre article.sobre h1 {
+            display: block;
+            float: left;
+            width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
+            margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+            margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+        @media screen and (min-width: 1025px) {
+          #sobre article.sobre h1 {
+            display: block;
+            float: left;
+            width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
+            margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+            margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+        @media screen and (max-width: 640px) {
+          #sobre article.sobre h1 {
+            font-size: 48px;
+            line-height: 60px;
+            margin-bottom: 24px; } }
+      #sobre article.sobre figure img {
+        height: 24px; }
+        @media screen and (max-width: 640px) {
+          #sobre article.sobre figure img {
+            height: 12px; } }
+      @media screen and (max-width: 640px) {
+        #sobre article.sobre figure {
+          padding-bottom: 48px; } }
     #sobre article.cara {
       padding-right: calc(16.666% - 120px);
-      padding-left: calc( 100%/12 - 24px );
-      border-bottom: 1px dotted #172442; }
+      padding-left: calc( 100%/12 - 24px ); }
       @media screen and (max-width: 640px) {
         #sobre article.cara {
+          border-bottom: none;
           padding-right: 12px;
           padding-left: 12px; } }
-    #sobre article.processos {
-      padding-left: calc(16.666% - 120px);
-      padding-right: calc( 100%/12 - 24px );
-      border-right: 1px dotted #172442; }
-      @media screen and (max-width: 640px) {
-        #sobre article.processos {
-          border-bottom: 1px dotted #172442;
-          border-right: none;
-          padding-right: 12px;
-          padding-left: 12px; } }
-    #sobre article.impacto {
-      padding-right: calc(16.666% - 120px);
-      padding-left: calc( 100%/12 - 24px );
-      padding-bottom: 500em;
-      margin-bottom: -500em; }
-      @media screen and (max-width: 640px) {
-        #sobre article.impacto {
-          border-right: none;
-          padding-right: 12px;
-          padding-left: 12px; }
-          #sobre article.impacto p:last-child {
-            margin-bottom: 72px; } }
-      @media screen and (min-width: 641px) {
-        #sobre article.impacto p:last-child {
-          margin-bottom: 96px; } }
-    #sobre article p {
-      color: #333; }
+      #sobre article.cara h2 {
+        color: #172442;
+        border-bottom: 1px dotted #ee3a39;
+        padding-bottom: 24px; }
+      #sobre article.cara p {
+        color: #333; }
+
+#impacto {
+  padding-bottom: 48px;
+  border-top: 1px solid #172442; }
+  #impacto article {
+    border-top: 1px dotted #ee3a39;
+    padding-top: 24px;
+    padding-right: 48px; }
+    @media screen and (max-width: 640px) {
+      #impacto article {
+        display: block;
+        float: left;
+        width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
+        margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (max-width: 640px) {
+      #impacto article {
+        padding-right: 0;
+        padding-top: 12px; } }
+    @media screen and (min-width: 641px) {
+      #impacto article {
+        padding-right: 0; } }
+    @media screen and (min-width: 1025px) {
+      #impacto article {
+        padding-right: 0; } }
+    @media screen and (min-width: 641px) {
+      #impacto article {
+        display: block;
+        float: left;
+        width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  #impacto .titulo {
+    border-top: none;
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+    @media screen and (max-width: 640px) {
+      #impacto .titulo {
+        display: block;
+        float: left;
+        width: calc( (100%/4 - 24px)*4 + (4 - 1)*24px);
+        margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 641px) {
+      #impacto .titulo {
+        display: block;
+        float: left;
+        width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
+        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (max-width: 640px) {
+      #impacto .titulo h1 {
+        margin-bottom: 24px; } }
 
 #atuacao {
   background-color: #172442;
   color: #fff;
   padding-bottom: 96px; }
-  #atuacao article {
-    padding-right: 48px; }
-    @media screen and (max-width: 640px) {
-      #atuacao article {
-        display: block;
-        float: left;
-        width: calc( (100%/4 - 24px)*2 + (2 - 1)*24px);
-        margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
-    @media screen and (max-width: 640px) {
-      #atuacao article {
-        padding-right: 0; } }
-    @media screen and (min-width: 1025px) {
-      #atuacao article {
-        display: block;
-        float: left;
-        width: calc( (100%/12 - 24px)*3 + (3 - 1)*24px);
-        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  @media screen and (max-width: 640px) {
+    #atuacao article {
+      display: block;
+      float: left;
+      width: calc( (100%/4 - 24px)*2 + (2 - 1)*24px);
+      margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+      margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  @media screen and (max-width: 640px) {
+    #atuacao article {
+      padding-right: 0; } }
+  @media screen and (min-width: 641px) {
+    #atuacao article {
+      display: block;
+      float: left;
+      width: calc( (100%/12 - 24px)*3 + (3 - 1)*24px);
+      margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+      margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  @media screen and (min-width: 641px) {
+    #atuacao article {
+      padding-right: 0; } }
+  @media screen and (min-width: 1025px) {
+    #atuacao article {
+      display: block;
+      float: left;
+      width: calc( (100%/12 - 24px)*3 + (3 - 1)*24px);
+      margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+      margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+  @media screen and (min-width: 1025px) {
+    #atuacao article {
+      padding-right: 48px; } }
   #atuacao h1 {
     color: #fff; }
     @media screen and (max-width: 640px) {
@@ -430,20 +534,16 @@ section {
         margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
   #atuacao figure {
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    padding-right: 50%; }
     @media screen and (max-width: 640px) {
       #atuacao figure {
-        margin-bottom: 24px;
-        padding-right: 50%; } }
-    @media screen and (min-width: 1025px) {
-      #atuacao figure {
-        display: block;
-        float: left;
-        width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
-        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+        margin-bottom: 24px; } }
   #atuacao h2 {
     color: #fff; }
+  #atuacao p {
+    border-top: 1px dotted #ee3a39;
+    padding-top: 24px; }
 
 #parceiros {
   background-color: #fff;
@@ -480,8 +580,7 @@ section {
         content: ""; }
   #parceiros figure {
     margin-bottom: 48px;
-    margin-top: 48px;
-    padding: 0 24px; }
+    margin-top: 48px; }
     @media screen and (max-width: 640px) {
       #parceiros figure {
         display: block;
@@ -489,16 +588,22 @@ section {
         width: calc( (100%/4 - 24px)*2 + (2 - 1)*24px);
         margin-left: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/4 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
-    @media screen and (max-width: 640px) {
-      #parceiros figure {
-        padding: 0; } }
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 641px) {
       #parceiros figure {
         display: block;
         float: left;
         width: calc( (100%/12 - 24px)*3 + (3 - 1)*24px);
         margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (max-width: 640px) {
+      #parceiros figure {
+        padding: 0; } }
+    @media screen and (min-width: 641px) {
+      #parceiros figure {
+        padding: 0; } }
+    @media screen and (min-width: 1025px) {
+      #parceiros figure {
+        padding: 0 24px; } }
 
 #contato {
   background-color: #ee3a39;
@@ -550,6 +655,7 @@ section {
         margin-left: calc((100%/12 - 24px)*3 + (3 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*3 + (3 - 1)*24px + 1.5*24px); } }
   #contato a {
+    margin-top: 24px;
     background-color: #fff;
     font-size: 24px;
     line-height: 36px;
@@ -572,6 +678,9 @@ section {
           margin-right: 6px; } }
     #contato a:hover {
       background-color: #172442; }
+
+#popupevento {
+  position: fixed; }
 
 footer {
   background-color: #333;
