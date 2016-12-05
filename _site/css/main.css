@@ -137,7 +137,9 @@ header {
   background-color: #fff;
   z-index: 1;
   width: 100%;
-  height: 60px; }
+  height: 60px;
+  -webkit-transition: top .5s, border-bottom .5s;
+  transition: top .5s, border-bottom .5s; }
   @media screen and (max-width: 640px) {
     header {
       top: -56px;
@@ -171,7 +173,7 @@ header {
     header li:hover {
       border-bottom: 2px solid #ee3a39; }
   header.hidden {
-    top: -60px;
+    top: -56px;
     border-bottom: 4px solid #ee3a39; }
 
 #capa {

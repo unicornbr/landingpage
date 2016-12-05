@@ -1,33 +1,29 @@
 ---
-layout: default
 ---
+<!DOCTYPE html>
 
-{% include capa.html %}
-{% include objetivo.html %}
-{% include sobre.html %}
-{% include impacto.html %}
-{% include atuacao.html %}
-{% include parceiros.html %}
-{% include contato.html %}
-{% include popupevento.html %}
-{% include rodape.html %}
+<html>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/parallax.js"></script>
-<script type="text/javascript">
+  {% include head.html %}
 
-  var headerHeight = $('header').height();
+  <body>
 
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-</script>
+    {% include header.html %}
+
+    {% include capa.html %}
+    {% include objetivo.html %}
+    {% include sobre.html %}
+    {% include impacto.html %}
+    {% include atuacao.html %}
+    {% include parceiros.html %}
+    {% include contato.html %}
+
+    {% include popupevento.html %}
+
+    {% include rodape.html %}
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>
