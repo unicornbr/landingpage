@@ -2,7 +2,7 @@
 var scrollAmount = window.pageYOffset;
 var scrollTest = $(window).height();
 
-if(scrollAmount <= scrollTest) {
+if(scrollAmount < scrollTest) {
   $( "header" ).addClass( "hidden" );
 }
 
@@ -10,7 +10,7 @@ $(window).on('scroll', function() {
     var scrollAmount = window.pageYOffset;
     var scrollTest = $(window).height();
 
-    if(scrollAmount > scrollTest) {
+    if(scrollAmount >= scrollTest) {
       $( "header" ).removeClass( "hidden" );
     } else {
       $( "header" ).addClass( "hidden" );

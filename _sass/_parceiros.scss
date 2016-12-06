@@ -12,15 +12,6 @@
 		span {
 			position: relative;
 			padding-bottom: 24px;
-			&:after { 
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 100%;
-				height: 1px;
-				border-bottom: 1px dotted $azul;
-				content:""
-			}
 		}
 	}
 	figure {

@@ -9,129 +9,9 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-a:visited {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: none;
-}
-a:focus {
-    text-decoration: none;
-}
-a:hover, a:active {
-    text-decoration: none;
-}
-
-b {
-    font-weight: 300;
-    color: $vermelho;
-}
-
 body {
     color: $preto;
     background-color: $branco;
-}
-
-h1, h3, p, li, a {
-    font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
-}
-
-h1 {
-    @media #{$phoneQuery} {
-        font-size: 32px;
-        line-height: 36px;
-        margin-bottom: 48px;
-    }
-    font-size: 48px;
-    line-height: 60px;
-    font-weight: 800;
-    margin-bottom: 48px;
-    letter-spacing: 0.05em;
-}
-
-
-h2 {
-    @media #{$phoneQuery} {
-        font-size: 21px;
-        line-height: 32px;
-    }
-    @media #{$tabletQuery} {
-        font-size: 21px;
-        line-height: 32px;
-    }
-    @media #{$desktopQuery} {
-        font-size: 28px;
-        line-height: 36px;
-    }
-    font-family: "freight-micro-pro", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    margin-bottom: 24px;
-}
-
-h3 {
-    @media #{$phoneQuery} {
-        font-size: 14px;
-    }
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    letter-spacing: 0.05em;
-}
-
-p, li {
-    font-size: 16px;
-    line-height: 24px;
-}
-
-p {
-    margin-bottom: 24px;
-    font-weight: 300;
-    @media #{$phoneQuery} {
-        font-weight: 300;
-    }
-}
-
-li {
-    list-style-type: none;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    @media #{$phoneQuery} {
-        font-size: 14px;
-        display: inline-block;
-        margin-left: 6px;
-    }
-    @media #{$tabletQuery} {
-        display: inline-block;
-        margin-left: 6px;
-    }
-    @media #{$desktopQuery} {
-        display: block;
-        margin-left: 0px;
-    }
-}
-
-
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-
-figure > img {
-    display: block;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
 }
 
 section {
@@ -155,4 +35,13 @@ section {
     margin-left: auto;
     overflow: hidden;
     height:100%;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+figure > img {
+    display: block;
 }

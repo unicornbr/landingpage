@@ -1,5 +1,5 @@
 #atuacao {
-	background-color: $azul;
+	background-color: $vermelho;
 	color: $branco;
 	padding-bottom: 96px;
 	article {
@@ -19,7 +19,7 @@
 	h1 {
 		@include phone(0, 4, 0);
 		@include desktop(0, 12, 0);
-		color: $branco;
+		color: $azul;
 	}
 	figure {
 		margin-bottom: 48px;
@@ -29,10 +29,10 @@
 		}
 	}
 	h2 {
-		color: $branco
+		color: $azul;
 	}
 	p {
-		border-top: 1px dotted $vermelho;
+		border-top: 1px dotted $azul;
 		padding-top: 24px;
 	}
 }
