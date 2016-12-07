@@ -38,6 +38,9 @@ img {
 figure > img {
   display: block; }
 
+h1, h3, p, li, a {
+  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -54,20 +57,24 @@ b {
   font-weight: 300;
   color: #ee3a39; }
 
-h1, h3, p, li, a {
-  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif; }
-
 h1 {
-  font-size: 48px;
-  line-height: 60px;
   font-weight: 800;
-  margin-bottom: 48px;
   letter-spacing: 0.05em; }
   @media screen and (max-width: 640px) {
     h1 {
       font-size: 32px;
       line-height: 36px;
       margin-bottom: 48px; } }
+  @media screen and (min-width: 641px) {
+    h1 {
+      font-size: 48px;
+      line-height: 60px;
+      margin-bottom: 48px; } }
+  @media screen and (min-width: 1441px) {
+    h1 {
+      font-size: 60px;
+      line-height: 72px;
+      margin-bottom: 72px; } }
 
 h2 {
   font-family: "freight-micro-pro", Helvetica, Arial, sans-serif;
@@ -253,6 +260,14 @@ header {
         margin-top: 25vh; } }
     #capa h1 span {
       font-weight: 700; }
+    @media screen and (min-width: 1441px) {
+      #capa h1 {
+        display: block;
+        float: left;
+        width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-left: calc((100%/12 - 24px)*2 + (2 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
   #capa .site-nav {
     color: #fff;
     text-align: right;

@@ -1,3 +1,7 @@
+h1, h3, p, li, a {
+    font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -20,20 +24,23 @@ b {
     color: $vermelho;
 }
 
-h1, h3, p, li, a {
-    font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
-}
-
 h1 {
-    font-size: 48px;
-    line-height: 60px;
     font-weight: 800;
-    margin-bottom: 48px;
     letter-spacing: 0.05em;
     @media #{$phoneQuery} {
         font-size: 32px;
         line-height: 36px;
         margin-bottom: 48px;
+    }
+    @media #{$tabletQuery} {
+        font-size: 48px;
+        line-height: 60px;
+        margin-bottom: 48px;
+    }
+    @media #{$largeQuery} {
+        font-size: 60px;
+        line-height: 72px;
+        margin-bottom: 72px;
     }
 }
 

@@ -44,6 +44,7 @@
 		span {
 			font-weight: 700;
 		}
+		@include large(2, 6, 0);
 	}
     .site-nav {
     	@include phone(0, 4, 0);
