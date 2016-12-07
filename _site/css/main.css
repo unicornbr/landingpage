@@ -459,6 +459,14 @@ header {
         width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
         margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 1441px) {
+      #impacto article {
+        display: block;
+        float: left;
+        width: calc( (100%/12 - 24px)*3 + (3 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
   #impacto .titulo {
     border-top: none;
     border-bottom: none;
@@ -509,14 +517,18 @@ header {
       padding-right: 0; } }
   @media screen and (min-width: 1025px) {
     #atuacao article {
+      padding-right: 48px; } }
+  @media screen and (min-width: 1441px) {
+    #atuacao article {
       display: block;
       float: left;
-      width: calc( (100%/12 - 24px)*3 + (3 - 1)*24px);
+      width: calc( (100%/12 - 24px)*2 + (2 - 1)*24px);
+      max-width: calc(100% - 24px);
       margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
-      margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
-  @media screen and (min-width: 1025px) {
+      margin-right: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+  @media screen and (min-width: 1441px) {
     #atuacao article {
-      padding-right: 48px; } }
+      padding-right: 0; } }
   #atuacao h1 {
     color: #172442; }
     @media screen and (max-width: 640px) {
@@ -717,6 +729,14 @@ header {
         width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
         margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 1441px) {
+      #lancamento article {
+        display: block;
+        float: left;
+        width: calc( (100%/12 - 24px)*3 + (3 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
   #lancamento .titulo {
     color: #ee3a39;
     border-top: none;
@@ -735,6 +755,13 @@ header {
       #lancamento .titulo {
         display: block;
         float: left;
+        width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
+        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 1025px) {
+      #lancamento .titulo {
+        display: block;
+        float: left;
         width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
         margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
         margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
@@ -745,6 +772,13 @@ header {
     border-top: none;
     padding-top: 0; }
     @media screen and (min-width: 641px) {
+      #lancamento .intro {
+        display: block;
+        float: left;
+        width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
+        margin-left: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px);
+        margin-right: calc((100%/12 - 24px)*0 + (0 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 1025px) {
       #lancamento .intro {
         display: block;
         float: left;

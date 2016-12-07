@@ -11,9 +11,12 @@
     	@media #{$tabletQuery} {
     		padding-right: 0;
     	}
-		@include desktop(0, 3, 0);
 		@media #{$desktopQuery} {
 			padding-right: 48px;
+		}
+		@include large(0, 2, 1);
+		@media #{$largeQuery} {
+			padding-right: 0;
 		}
 	}
 	h1 {
