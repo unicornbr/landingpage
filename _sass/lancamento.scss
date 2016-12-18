@@ -1,13 +1,12 @@
 #lancamento {
 	padding-bottom: 48px;
 	background-color: $azul;
-	.container {
+	.wrapper {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 	article {
-		float: none !important;
 		border-top: 1px dotted $vermelho;
 		padding-top: 24px;
 		padding-right: 48px;

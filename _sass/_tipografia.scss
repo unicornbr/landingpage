@@ -26,18 +26,15 @@ b {
 
 h1 {
     font-weight: 800;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 48px;
     letter-spacing: 0.05em;
-    @media #{$phoneQuery} {
-        font-size: 32px;
-        line-height: 36px;
-        margin-bottom: 48px;
-    }
-    @media #{$tabletQuery} {
+    @media #{$tablet-up} {
         font-size: 48px;
         line-height: 60px;
-        margin-bottom: 48px;
     }
-    @media #{$largeQuery} {
+    @media #{$large-up} {
         font-size: 60px;
         line-height: 72px;
         margin-bottom: 72px;
@@ -47,32 +44,26 @@ h1 {
 
 h2 {
     font-family: "freight-micro-pro", Helvetica, Arial, sans-serif;
-    font-weight: 300;
     font-style: italic;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 32px;
     margin-bottom: 24px;
-    @media #{$phoneQuery} {
-        font-size: 21px;
-        line-height: 32px;
-    }
-    @media #{$tabletQuery} {
-        font-size: 21px;
-        line-height: 32px;
-    }
-    @media #{$desktopQuery} {
+    @media #{$desktop-up} {
         font-size: 28px;
         line-height: 36px;
     }
 }
 
 h3 {
-    font-size: 16px;
-    line-height: 24px;
     text-transform: uppercase;
     font-variant-numeric: lining-nums;
+    font-size: 14px;
+    line-height: 24px;
     margin-bottom: 12px;
     letter-spacing: 0.05em;
-    @media #{$phoneQuery} {
-        font-size: 14px;
+    @media #{$tablet-up} {
+        font-size: 16px;
     }
 }
 
@@ -84,9 +75,6 @@ p, li {
 p {
     margin-bottom: 24px;
     font-weight: 300;
-    @media #{$phoneQuery} {
-        font-weight: 300;
-    }
 }
 
 li {
@@ -94,16 +82,10 @@ li {
     text-transform: uppercase;
     font-variant-numeric: lining-nums;
     letter-spacing: 0.05em;
-    @media #{$phoneQuery} {
-        font-size: 14px;
-        display: inline-block;
-        margin-left: 6px;
-    }
-    @media #{$tabletQuery} {
-        display: inline-block;
-        margin-left: 6px;
-    }
-    @media #{$desktopQuery} {
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 6px;
+    @media #{$desktop-up} {
         display: block;
         margin-left: 0px;
     }

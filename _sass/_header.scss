@@ -5,6 +5,7 @@ header {
 	height: 60px;
 	-webkit-transition: top .5s, border-bottom .5s;
     transition: top .5s, border-bottom .5s;
+    overflow: hidden;
 	@media #{$phoneQuery} {
 		top: -56px;
 		border-bottom: 4px solid $vermelho;
@@ -20,17 +21,16 @@ header {
 		position: fixed;
 		top: 0px;
 	}
+	.wrapper {
+		justify-content: space-between;
+	}
 	#logo {
-		display: inline-block;
-		float: left;
 		margin: 12px;
 		img {
 			height: 32px;
 		}
 	}
 	nav {
-		display: inline-block;
-		float: right;
 		margin: 12px;
 		margin-top: 18px;
 	}

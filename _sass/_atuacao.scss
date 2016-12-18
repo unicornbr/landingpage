@@ -4,31 +4,25 @@
 	padding-bottom: 96px;
 	article {
 		@include phone(0, 2, 0);
-		@media #{$phoneQuery} {
-        	padding-right: 0;
-    	}
-    	@include tablet(0, 3, 0);
-    	@media #{$tabletQuery} {
-    		padding-right: 0;
-    	}
-		@media #{$desktopQuery} {
+		@include tablet(0, 3, 0);
+		@media #{$desktop-up} {
 			padding-right: 48px;
 		}
 		@include large(0, 2, 1);
-		@media #{$largeQuery} {
+		@media #{$large-up} {
 			padding-right: 0;
 		}
 	}
 	h1 {
 		@include phone(0, 4, 0);
-		@include desktop(0, 12, 0);
+		@include tablet(0, 12, 0);
 		color: $azul;
 	}
 	figure {
-		margin-bottom: 48px;
+		margin-bottom: 24px;
 		padding-right: 50%;
-		@media #{$phoneQuery} {
-			margin-bottom: 24px;
+		@media #{$tablet-up} {
+			margin-bottom: 48px;
 		}
 	}
 	h2 {

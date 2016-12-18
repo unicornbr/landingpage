@@ -1,0 +1,70 @@
+@mixin polyptych($tiles, $contentCol) {
+    > article {
+        @media #{$tablet-up} {
+            width: 100%/$tiles;
+        }
+        > * {
+            @media #{$tablet-up} {
+                width: calc(#{$contentCol*$tiles*($tabletWrapper/$nOfColumnsTablet)} - #{$gutterTablet});
+            }
+            @media #{$desktop-up} {
+                width: calc(#{$contentCol*$tiles*($desktopWrapper/$nOfColumnsDesktop)} - #{$gutterDesktop});
+            }
+            @media #{$large-up} {
+                width: calc(#{$contentCol*$tiles*($largeWrapper/$nOfColumnsLarge)} - #{$gutterLarge});
+            }
+        }
+    }
+    > article:first-of-type {
+        > * {
+            @media #{$tablet-up} {
+                margin-left: calc(#{(100% - $tabletWrapper)/2*$tiles} + #{$gutterTablet/2});
+            }
+            @media #{$desktop-up} {
+                margin-left: calc(#{(100% - $desktopWrapper)/2*$tiles} + #{$gutterDesktop/2});
+            }
+            @media #{$large-up} {
+                margin-left: calc(#{(100% - $largeWrapper)/2*$tiles} + #{$gutterLarge/2});
+            }
+        }
+    }
+    > article:last-of-type {
+        > * {
+            @media #{$tablet-up} {
+                margin-right: calc(#{(100% - $tabletWrapper)/2*$tiles} + #{$gutterTablet/2});
+            }
+            @media #{$desktop-up} {
+                margin-right: calc(#{(100% - $desktopWrapper)/2*$tiles} + #{$gutterDesktop/2});
+            }
+            @media #{$large-up} {
+                margin-right: calc(#{(100% - $largeWrapper)/2*$tiles} + #{$gutterLarge/2});
+            }
+        }
+    }
+}
+
+.polyptych {
+    padding-top: 0;
+    > article {
+        @media #{$phone-only} {
+            width: 100%;
+            padding-left: $gutterPhone;
+            padding-right: $gutterPhone;
+        }
+        > * {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &.duo {
+        @include polyptych(2, 5);
+    }
+
+    &.trio {
+        @include polyptych(3, 3);
+    }
+
+    &.tetra {
+        @include polyptych(4, 2);
+    }
+}

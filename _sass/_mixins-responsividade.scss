@@ -1,0 +1,45 @@
+@import "variaveis-responsividade";
+
+$phoneQuery: "screen and (max-width: #{$breakpoint1 - 1px})";
+$tabletQuery: "screen and (min-width: #{$breakpoint1})";
+$desktopQuery: "screen and (min-width: #{$breakpoint2})";
+$largeQuery: "screen and (min-width: #{$breakpoint3})";
+
+$phone-only: "screen and (max-width: #{$breakpoint1 - 1px})";
+$tablet-up: "screen and (min-width: #{$breakpoint1})";
+$tablet-only: "screen and (min-width: #{$breakpoint1}) and (max-width: #{$breakpoint2 - 1px})";
+$mobile-only: "screen and (max-width: #{$breakpoint2 - 1px})";
+$desktop-up: "screen and (min-width: #{$breakpoint2})";
+$desktop-only: "screen and (min-width: #{$breakpoint2}) and (max-width: #{$breakpoint3 - 1px})";
+$large-up: "screen and (min-width: #{$breakpoint3})";
+
+@mixin phone($nLeft, $size, $nRight) {
+	width: calc(#{$columnWidthPhone*$size} - #{$gutterPhone});
+	margin-left: calc(#{$nLeft*$columnWidthPhone} + #{$gutterPhone/2});
+	margin-right: calc(#{$nRight*$columnWidthPhone} + #{$gutterPhone/2});
+}
+
+@mixin tablet($nLeft, $size, $nRight) {
+	@media #{$tablet-up} {
+		width: calc(#{$columnWidthTablet*$size} - #{$gutterTablet});
+		margin-left: calc(#{$nLeft*$columnWidthTablet} + #{$gutterTablet/2});
+		margin-right: calc(#{$nRight*$columnWidthTablet} + #{$gutterTablet/2});
+	}
+}
+
+@mixin desktop($nLeft, $size, $nRight) {
+	@media #{$desktop-up} {
+		width: calc(#{$columnWidthDesktop*$size} - #{$gutterDesktop});
+		margin-left: calc(#{$nLeft*$columnWidthDesktop} + #{$gutterDesktop/2});
+		margin-right: calc(#{$nRight*$columnWidthDesktop} + #{$gutterDesktop/2});
+	}
+}
+
+@mixin large($nLeft, $size, $nRight) {
+	@media #{$large-up} {
+		max-width: calc(100% - #{$gutterLarge});
+		width: calc(#{$columnWidthLarge*$size} - #{$gutterLarge});
+		margin-left: calc(#{$nLeft*$columnWidthLarge} + #{$gutterLarge/2});
+		margin-right: calc(#{$nRight*$columnWidthLarge} + #{$gutterLarge/2});
+	}
+}

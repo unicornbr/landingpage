@@ -1,0 +1,51 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#grid').click(function(){
+			$(this).toggleClass('aberto');
+		});
+	});
+</script>
+
+<style type="text/css">
+#grid {
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 5;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+}
+#grid article {
+    height: 100%;
+    border-left: 1px dotted rgba(0, 0, 0, 0.5);
+    border-right: 1px dotted rgba(0, 0, 0, 0.5);
+    width: calc(25% - 24px);
+	margin-left: 12px;
+	margin-right: 12px;
+}
+@media screen and (min-width: 641px) {
+	#grid article {
+    	width: calc(8.333% - 24px);
+    }
+}
+</style>
+
+<section id="grid">
+	<div class="wrapper">
+	<article></article>
+	<article></article>
+	<article></article>
+	<article></article>
+
+	<article></article>
+	<article></article>
+	<article></article>
+	<article></article>
+	<article></article>
+	<article></article>
+	<article></article>
+	<article></article>
+	</div>
+</section>

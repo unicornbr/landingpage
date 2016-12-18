@@ -1,0 +1,121 @@
+---
+---
+@charset "utf-8";
+
+@import "variaveis-responsividade";
+@import "mixins-responsividade";
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    @media #{$phone-only} {
+        width: calc(#{$phoneWrapper} - #{$gutterPhone});
+        max-width: calc(#{$phoneWrapper} - #{$gutterPhone});
+    }
+    @media #{$tablet-up} {
+        width: calc(#{$tabletWrapper} + #{$gutterTablet});
+    }
+    @media #{$desktop-up} {
+        width: calc(#{$desktopWrapper} + #{$gutterDesktop});
+    }
+    @media #{$large-up} {
+        width: calc(#{$largeWrapper} + #{$gutterLarge});
+    }
+}
+
+@media #{$phone-only} {
+	@for $i from 1 through $nOfColumnsPhone {
+		.phone-#{$i} {
+			width: calc(#{$columnWidthPhone*$i} - #{$gutterPhone});
+			margin-left: $gutterPhone/2;
+			margin-right: $gutterPhone/2;
+		}
+	}
+
+	@for $i from 1 through $nOfColumnsPhone - 1 {
+		.phone-left-#{$i} {
+			margin-left: calc(#{$i*$columnWidthPhone} + #{$gutterPhone/2});
+		}
+		.phone-right-#{$i} {
+			margin-right: calc(#{$i*$columnWidthPhone} + #{$gutterPhone/2});
+		}
+	}
+}
+
+@media #{$tablet-up} {
+	@for $i from 1 through $nOfColumnsTablet {
+		.tablet-#{$i} {
+			width: calc(#{$columnWidthTablet*$i} - #{$gutterTablet});
+			margin-left: $gutterTablet/2;
+			margin-right: $gutterTablet/2;
+		}
+	}
+
+	@for $i from 1 through $nOfColumnsTablet - 1 {
+		.tablet-left-#{$i} {
+			margin-left: calc(#{$i*$columnWidthTablet} + #{$gutterTablet/2});
+		}
+		.tablet-right-#{$i} {
+			margin-right: calc(#{$i*$columnWidthTablet} + #{$gutterTablet/2});
+		}
+	}
+}
+
+@media #{$desktop-up} {
+	@for $i from 1 through $nOfColumnsDesktop {
+		.desktop-#{$i} {
+			width: calc(#{$columnWidthDesktop*$i} - #{$gutterDesktop});
+			margin-left: $gutterDesktop/2;
+			margin-right: $gutterDesktop/2;
+		}
+	}
+
+	@for $i from 1 through $nOfColumnsDesktop - 1 {
+		.desktop-left-#{$i} {
+			margin-left: calc(#{$i*$columnWidthDesktop} + #{$gutterDesktop/2});
+		}
+		.desktop-right-#{$i} {
+			margin-right: calc(#{$i*$columnWidthDesktop} + #{$gutterDesktop/2});
+		}
+	}
+}
+
+@media #{$large-up} {
+	@for $i from 1 through $nOfColumnsLarge {
+		.large-#{$i} {
+			width: calc(#{$columnWidthLarge*$i} - #{$gutterLarge});
+			margin-left: $gutterLarge/2;
+			margin-right: $gutterLarge/2;
+		}
+	}
+
+	@for $i from 1 through $nOfColumnsLarge - 1 {
+		.large-left-#{$i} {
+			margin-left: calc(#{$i*$columnWidthLarge} + #{$gutterLarge/2});
+		}
+		.large-right-#{$i} {
+			margin-right: calc(#{$i*$columnWidthLarge} + #{$gutterLarge/2});
+		}
+	}
+}
+
+.wrapper {
+	> article, > h1, > h2, > h3, > h4, > h5, > h6  {
+		@media #{$phone-only} {
+			@extend .phone-#{$nOfColumnsPhone};
+		}
+		@media #{$tablet-up} {
+			@extend .tablet-#{$nOfColumnsTablet};
+		}
+		@media #{$desktop-up} {
+			@extend .desktop-#{$nOfColumnsDesktop};
+		}
+		@media #{$large-up} {
+			@extend .large-#{$nOfColumnsLarge};
+		}
+    }
+}

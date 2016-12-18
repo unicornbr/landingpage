@@ -1,0 +1,25 @@
+$nOfColumnsPhone: 4;
+$gutterPhone: 24px;
+
+$nOfColumnsTablet: 12;
+$gutterTablet: 24px;
+
+$nOfColumnsDesktop: 12;
+$gutterDesktop: 24px;
+
+$nOfColumnsLarge: 12;
+$gutterLarge: 24px;
+
+$breakpoint1: 641px;
+$breakpoint2: 1025px;
+$breakpoint3: 1441px;
+
+$phoneWrapper: 100%;
+$tabletWrapper: 91.666%;
+$desktopWrapper: 83.333%;
+$largeWrapper: 75%;
+
+$columnWidthPhone: 100%/$nOfColumnsPhone;
+$columnWidthTablet: 100%/$nOfColumnsTablet;
+$columnWidthDesktop: 100%/$nOfColumnsDesktop;
+$columnWidthLarge: 100%/$nOfColumnsLarge;

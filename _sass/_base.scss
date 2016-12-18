@@ -15,26 +15,17 @@ body {
 }
 
 section {
-    @media #{$phoneQuery} {
-        padding-top: 48px;
-    }
-    padding-top: 72px;
+    padding-top: 48px;
     height: 100%;
+    @media #{$tablet-up} {
+        padding-top: 72px;
+    }
     &:first-of-type {
         padding-top: 0px;
     }
     * {
         position: relative;
     }
-}
-
-.container {
-    width: calc(66.666% + 240px);
-    max-width: calc(100% - 24px);
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
-    height:100%;
 }
 
 img {
